@@ -213,7 +213,7 @@ class MediaWorkflowPipeline:
             "file_type": "unknown",
             "analysis_result": "",
             "caption": "",
-            "hashtags": [],
+            "hashtags": [], 
             "suggested_locations": [],
             "final_json_payload": "",
             "messages": []
@@ -221,5 +221,6 @@ class MediaWorkflowPipeline:
         
         print(f"🚀 Running pipeline for file: {file_path}")
         final_state = self.app.invoke(initial_state)
+        print(final_state)
         print("\n✨ Pipeline execution complete successfully!")
         return final_state
