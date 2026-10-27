@@ -2,6 +2,11 @@ name: Run uv Project on Dispatch
 
 on:
   workflow_dispatch:
+    inputs:
+      file_name:
+        description: "File name or Stratus object key to process"
+        required: true
+        type: string
 
 permissions:
   contents: read
@@ -27,4 +32,5 @@ jobs:
           CATALYST_CLIENT_ID: ${{ secrets.CATALYST_CLIENT_ID }}
           CATALYST_CLIENT_SECRET: ${{ secrets.CATALYST_CLIENT_SECRET }}
           CATALYST_REFRESH_TOKEN: ${{ secrets.CATALYST_REFRESH_TOKEN }}
-        run: uv run social-media-manager
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: uv run social-media-manager --file-name "$file_name"

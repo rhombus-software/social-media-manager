@@ -1,0 +1,43 @@
+{
+  "test_event_cache_put": {
+    "rule_id": "550025543778723664",
+    "target_id": "58408747",
+    "version": 1,
+    "attempt": 1,
+    "account": {
+      "org_id": "60091007996",
+      "project": {
+        "environment": "Development",
+        "name": "social-media-agents",
+        "id": "80414000000049033"
+      }
+    },
+    "events": [
+      {
+        "data": {
+          "cache_name": "aa2c62",
+          "cache_value": "0b7edb7a46",
+          "project_details": {
+            "project_name": "social-media-agents",
+            "id": "80414000000049033",
+            "project_type": "Live"
+          },
+          "segment_details": {
+            "segment_name": "Default",
+            "id": "80414000000049051"
+          },
+          "expiry_in_hours": 37,
+          "expires_in": "Oct 28, 2026 10:45 PM",
+          "ttl_in_milliseconds": "133200000"
+        },
+        "id": "adc69a20-c7a8-ea96-659c-07269a8b048",
+        "time_in_ms": "1793094303807",
+        "source": "publisher_id:57374047350308549/service:cloudscalecache/account:93244984",
+        "event_config": {
+          "api_name": "cache_item_created",
+          "id": "50546328997760143"
+        }
+      }
+    ]
+  }
+}

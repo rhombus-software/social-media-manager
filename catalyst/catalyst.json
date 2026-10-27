@@ -1,0 +1,9 @@
+{
+  "functions": {
+    "targets": [
+      "workflow-trigger"
+    ],
+    "ignore": [],
+    "source": "functions"
+  }
+}

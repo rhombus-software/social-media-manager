@@ -23,7 +23,6 @@ class StratusManager:
         }
         response = requests.post(url, data=payload)
         response_data = response.json()
-        print(response_data)
         if "access_token" not in response_data:
             raise RuntimeError(f"Failed to generate access token: {response_data}")
             
