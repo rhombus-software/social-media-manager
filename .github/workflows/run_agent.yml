@@ -22,8 +22,8 @@ jobs:
         run: uv sync --locked
 
       - name: Run command or script
-        run: uv run social-media-manager
         env:
           CATALYST_CLIENT_ID: ${{ secrets.CATALYST_CLIENT_ID }}
           CATALYST_CLIENT_SECRET: ${{ secrets.CATALYST_CLIENT_SECRET }}
           CATALYST_REFRESH_TOKEN: ${{ secrets.CATALYST_REFRESH_TOKEN }}
+        run: uv run social-media-manager
