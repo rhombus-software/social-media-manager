@@ -3,7 +3,7 @@ from .Agent import MediaWorkflowPipeline
 import json
 def main() -> None:
     stratus = StratusManager(bucket_name="raw")
-    # stratus.download_file("12.mp4", "video.mp4")
+    stratus.download_file("12.mp4", "video.mp4")
     wf = MediaWorkflowPipeline()
     analyzed_data = wf.run(file_path='video.mp4')
     with open("data.json", "w") as file:
