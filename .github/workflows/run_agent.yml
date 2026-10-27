@@ -1,0 +1,22 @@
+name: Run uv Project on Dispatch
+
+on:
+  workflow_dispatch:
+
+jobs:
+  run-uv-task:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install uv and set up Python
+        uses: astral-sh/setup-uv@v3
+        with:
+          enable-cache: true
+
+      - name: Sync project dependencies
+        run: uv sync --locked
+
+      - name: Run command or script
+        run: uv run social-media-manager
