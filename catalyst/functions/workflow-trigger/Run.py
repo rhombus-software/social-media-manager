@@ -18,11 +18,11 @@ class Github:
             url,
             headers={
                 "Accept": "application/vnd.github+json",
-                "Authorization": f"Bearer {token}",
+                "Authorization": f"Bearer {self.token}",
                 "X-GitHub-Api-Version": "2026-03-10",
             },
             json={
-                "ref": branch, 
+                "ref": self.branch, 
                 "inputs": {
                     "file_name": file_name
                 }

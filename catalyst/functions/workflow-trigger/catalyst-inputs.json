@@ -15,27 +15,55 @@
     "events": [
       {
         "data": {
-          "cache_name": "aa2c62",
-          "cache_value": "0b7edb7a46",
-          "project_details": {
-            "project_name": "social-media-agents",
-            "id": "80414000000049033",
-            "project_type": "Live"
+          "action_time": "921789643338408",
+          "bucket_details": {
+            "project_details": {
+              "id": "80414000000049033",
+              "project_name": "social-media-agents",
+              "project_type": "Live"
+            },
+            "created_time": "Oct 31, 2026 05:23 PM",
+            "modified_time": "Oct 31, 2026 05:23 PM",
+            "bucket_name": "raw",
+            "modified_by": {
+              "email_id": "rhombus.digital.india@gmail.com",
+              "user_type": "Admin",
+              "user_id": "945558218547330",
+              "is_confirmed": true,
+              "last_name": "d9170",
+              "first_name": "b576dc959c",
+              "zuid": "6434716684"
+            },
+            "created_by": {
+              "email_id": "rhombus.digital.india@gmail.com",
+              "user_type": "Admin",
+              "user_id": "945558218547330",
+              "is_confirmed": true,
+              "last_name": "d9170",
+              "first_name": "b576dc959c",
+              "zuid": "6434716684"
+            },
+            "bucket_meta": {
+              "versioning": true,
+              "encryption": false,
+              "audit_consent": false,
+              "caching": {
+                "status": "Disabled"
+              }
+            }
           },
-          "segment_details": {
-            "segment_name": "Default",
-            "id": "80414000000049051"
-          },
-          "expiry_in_hours": 37,
-          "expires_in": "Oct 28, 2026 10:45 PM",
-          "ttl_in_milliseconds": "133200000"
+          "object_details": [
+            {
+              "key": "compressed_video (1).mp4"
+            }
+          ]
         },
-        "id": "adc69a20-c7a8-ea96-659c-07269a8b048",
-        "time_in_ms": "1793094303807",
-        "source": "publisher_id:57374047350308549/service:cloudscalecache/account:93244984",
+        "id": "8ab424c5-b26b-56b4-8332-73d3a61a87b",
+        "time_in_ms": "1793467420449",
+        "source": "publisher_id:29454573558619106/service:cloudscalestratus/account:62082104",
         "event_config": {
-          "api_name": "cache_item_created",
-          "id": "50546328997760143"
+          "api_name": "stratus_object_uploaded",
+          "id": "64952463252810421"
         }
       }
     ]
