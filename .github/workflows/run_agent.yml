@@ -33,5 +33,4 @@ jobs:
           CATALYST_CLIENT_SECRET: ${{ secrets.CATALYST_CLIENT_SECRET }}
           CATALYST_REFRESH_TOKEN: ${{ secrets.CATALYST_REFRESH_TOKEN }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          INPUT_FILE_NAME: ${{ github.event.inputs.file_name }}
-        run: uv run social-media-manager --file-name "$INPUT_FILE_NAME"
+        run: uv run social-media-manager --file-name ${{ github.event.inputs.file_name }}
