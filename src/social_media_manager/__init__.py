@@ -4,7 +4,7 @@ from argparse import ArgumentParser
 import json
 def main() -> None:
     parser = ArgumentParser()
-    parser.add_argument("--file_name", required=True)
+    parser.add_argument("--file-name", required=True)
     args = parser.parse_args()
     file_name = args.file_name
     if not file_name:
