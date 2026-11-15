@@ -16,11 +16,12 @@ def main() -> None:
     
     if wf_flow == 'file_parser':
         # Do file parsing
-        stratus = StratusManager(bucket_name="raw")
-        stratus.download_file(file_name, file_name)
+        download_stratus = StratusManager(bucket_name="raw")
+        upload_stratus = StratusManager(bucket_name='parsed')
+        download_stratus.download_file(file_name, file_name)
         fp = FileParser(file_name)
         output_file_path = fp.extreme_compress_video()
-        stratus.upload_file(output_file_path, output_file_path)
+        upload_stratus.upload_file(output_file_path, output_file_path)
         print("File parsing is completed")
     elif wf_flow == 'agent':
         stratus = StratusManager(bucket_name="raw")

@@ -35,6 +35,3 @@ class Github:
         print("Workflow dispatched.")
         if response.content:
             print(response.json())
-
-
-
