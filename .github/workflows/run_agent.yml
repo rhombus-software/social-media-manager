@@ -15,7 +15,7 @@ on:
         type: choice
         options:
           - file_parser
-          - social_media
+          - agent
 
 permissions:
   contents: read
