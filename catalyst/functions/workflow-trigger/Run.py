@@ -24,7 +24,8 @@ class Github:
             json={
                 "ref": self.branch, 
                 "inputs": {
-                    "file_name": file_name
+                    "file_name": file_name,
+                    "wf_flow" : "agent"
                 }
             },
             timeout=30,
