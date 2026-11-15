@@ -1,7 +1,8 @@
 {
   "functions": {
     "targets": [
-      "workflow-trigger"
+      "workflow-trigger",
+      "file-parser"
     ],
     "ignore": [],
     "source": "functions"
