@@ -5,5 +5,11 @@
     ],
     "ignore": [],
     "source": "functions"
-  }
+  },
+  "slate": [
+    {
+      "name": "social-media-manager",
+      "source": "/home/rhombus_digital_india/social-media-manager/catalyst/social-media-manager"
+    }
+  ]
 }

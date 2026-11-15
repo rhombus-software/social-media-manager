@@ -1,3 +1,4 @@
+
 name: Run uv Project on Dispatch
 
 on:
@@ -8,6 +9,14 @@ on:
         required: true
         type: string
 
+      wf_flow:
+        description: "Workflow flow to execute"
+        required: true
+        type: choice
+        options:
+          - file_parser
+          - social_media
+
 permissions:
   contents: read
 
@@ -15,6 +24,7 @@ jobs:
   run-uv-task:
     runs-on: ubuntu-latest
     environment: dev
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -23,6 +33,13 @@ jobs:
         uses: astral-sh/setup-uv@v3
         with:
           enable-cache: true
+
+      - name: Install FFmpeg
+        if: ${{ github.event.inputs.wf_flow == 'file_parser' }}
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg
+          ffmpeg -version
 
       - name: Sync project dependencies
         run: uv sync --locked
@@ -33,4 +50,6 @@ jobs:
           CATALYST_CLIENT_SECRET: ${{ secrets.CATALYST_CLIENT_SECRET }}
           CATALYST_REFRESH_TOKEN: ${{ secrets.CATALYST_REFRESH_TOKEN }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-        run: uv run social-media-manager --file-name ${{ github.event.inputs.file_name }}
+        run: |
+          uv run social-media-manager \
+            --file-name "${{ github.event.inputs.file_name }}" --wf_flow "${{github.event.inputs.wf_flow}}"

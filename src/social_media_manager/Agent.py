@@ -210,7 +210,7 @@ class MediaWorkflowPipeline:
             "file_path": file_path,
             "file_name": "",
             "file_size_mb": 0.0,
-            "file_type": "unknown",
+            "file_type": "unknown", 
             "analysis_result": "",
             "caption": "",
             "hashtags": [], 
