@@ -24,7 +24,7 @@ def main() -> None:
         upload_stratus.upload_file(output_file_path, output_file_path)
         print("File parsing is completed")
     elif wf_flow == 'agent':
-        download_stratus = StratusManager(bucket_name="raw")
+        download_stratus = StratusManager(bucket_name="parsed")
         upload_stratus = StratusManager(bucket_name='video-metadata')
         download_stratus.download_file(file_name, file_name)
         wf = MediaWorkflowPipeline()
