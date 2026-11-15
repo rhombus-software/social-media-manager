@@ -23,7 +23,7 @@ def main() -> None:
         output_file_path = fp.extreme_compress_video()
         upload_stratus.upload_file(output_file_path, output_file_path)
         print("File parsing is completed")
-    elif wf_flow == 'agent':
+    elif wf_flow == 'workflow_trigger':
         download_stratus = StratusManager(bucket_name="parsed")
         upload_stratus = StratusManager(bucket_name='video-metadata')
         download_stratus.download_file(file_name, file_name)
