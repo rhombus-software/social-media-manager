@@ -9,7 +9,7 @@ class Github:
         self.branch = "main"
         self.token = os.getenv('GITHUB_TOKEN')
 
-    def run_workflow(self, file_name):
+    def run_workflow(self, file_name, wf_flow):
         url = (
             f"https://api.github.com/repos/{self.owner}/{self.repo}"
             f"/actions/workflows/{self.workflow_file}/dispatches"
@@ -35,3 +35,6 @@ class Github:
         print("Workflow dispatched.")
         if response.content:
             print(response.json())
+
+
+

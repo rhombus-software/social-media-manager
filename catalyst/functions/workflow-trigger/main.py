@@ -10,7 +10,7 @@ def handler(event, context):
     file_key = raw_data["events"][0]["data"]["object_details"][0]["key"]
     logger.info(file_key)
     gh = Github()
-    gh.run_workflow(file_key)
+    gh.run_workflow(file_key, wf_flow='file_paser')
     '''Context Functionalities'''
     # remaining_execution_time_ms = context.get_remaining_execution_time_ms()
     # max_execution_time_ms = context.get_max_execution_time_ms()
