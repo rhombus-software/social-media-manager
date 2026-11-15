@@ -25,7 +25,7 @@ class Github:
                 "ref": self.branch, 
                 "inputs": {
                     "file_name": file_name,
-                    "wf_flow" : "agent"
+                    "wf_flow" : "workflow_trigger"
                 }
             },
             timeout=30,

@@ -15,7 +15,7 @@ on:
         type: choice
         options:
           - file_parser
-          - agent
+          - workflow_trigger
 
 permissions:
   contents: read
