@@ -1,25 +1,25 @@
 {
   "settings": {
     "temperature": 0.1,
-    "default_model": "gemini-3.5-flash",
+    "default_model": "gemini-3.8-flash",
     "fallback_tag": "music"
   },
   "nodes": {
     "content_analyzer": {
-      "model": "gemini-3.5-flash",
+      "model": "gemini-3.8-flash",
       "video_prompt": "Analyze this video concisely (caveman style): 1. Is it a music cover or a vlogging video? 2. If music cover: name the song being covered (it might be a Bengali song[cite: 1]), list instruments used, and who is singing. 3. If vlogging: list the exact places/locations shown. Keep it ultra-short and factual.",
       "image_prompt": "Analyze this image concisely: 1. Mood/Vibe. 2. Core themes. 3. Probable location/setting."
     },
     "caption_generator": {
-      "model": "gemini-3.5-flash",
+      "model": "gemini-3.8-flash",
       "prompt": "Write 1 short, catchy social media caption based on this analysis. Output ONLY the caption text:\n{analysis}"
     },
     "hashtag_generator": {
-      "model": "gemini-3.5-flash",
+      "model": "gemini-3.8-flash",
       "prompt": "Extract 5-8 trending tags based on this analysis. Output comma-separated keywords ONLY, no symbols:\n{analysis}"
     },
     "location_generator": {
-      "model": "gemini-3.5-flash",
+      "model": "gemini-3.8-flash",
       "prompt": "Identify 1-3 best physical locations or contextual geotags to tag for this content. Output comma-separated names ONLY:\n{analysis}"
     }
   }
